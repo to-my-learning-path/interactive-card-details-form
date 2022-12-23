@@ -1,0 +1,82 @@
+:root {
+  /* colors */
+
+  /* primary */
+  /* __active input border */
+  --linear-gradient-first: hsl(249, 99%, 64%);
+  --linear-gradient-second: hsl(278, 94%, 30%);
+
+  /* __input error */
+  --red: hsl(0, 100%, 66%);
+
+  /* neutral */
+  --white: hsl(0, 0%, 100%);
+  --light-grayish-violet: hsl(270, 3%, 87%);
+  --dark-grayish-violet: hsl(279, 6%, 55%);
+  --very-dark-violet: hsl(278, 68%, 11%);
+
+  --font-size: 18px;
+
+  --font-family: "Space Grotesk", sans-serif;
+}
+
+/* CSS Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+#root,
+#__next {
+  isolation: isolate;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font-size: var(--font-size);
+  font-family: var(--font-family);
+}

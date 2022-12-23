@@ -1,0 +1,123 @@
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1.5fr;
+  min-height: 100vh;
+  background-image: url(./assets/images/bg-main-mobile.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* Credit Card Display */
+
+.credit-card__display {
+  padding-inline: 1rem;
+  position: relative;
+  font-size: 1rem;
+  width: 375px;
+  margin-inline: auto;
+}
+
+.credit-card__front img,
+.credit-card__back img {
+  width: 100%;
+}
+
+.credit-card__front {
+  position: absolute;
+  top: 45%;
+  left: 5%;
+  right: 25%;
+  z-index: 1;
+}
+
+.front-card__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-transform: uppercase;
+  padding: 0.5rem;
+  color: var(--light-grayish-violet);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100%;
+}
+
+.front-card__content img {
+  margin-block-end: 1rem;
+  width: fit-content;
+}
+
+.front-card__content p:first {
+  word-spacing: 0.5rem;
+}
+
+.two-columns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.credit-card__back {
+  position: absolute;
+  top: 15%;
+  right: 5%;
+  left: 25%;
+}
+
+.back-card__content {
+  position: absolute;
+  top: 42%;
+  right: 12%;
+  color: var(--light-grayish-violet);
+}
+
+/* Credit Card Form */
+.credit-card__form {
+  background-color: white;
+  padding: 1rem;
+  padding-top: clamp(1rem, 0.286rem + 3.571vw, 2rem);
+  display: grid;
+  place-content: center;
+}
+
+/* Thank You Display */
+
+.thank-you__display {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: auto;
+}
+
+.thank-you__display button {
+  background-color: var(--very-dark-violet);
+  color: var(--white);
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  padding-block: 1rem;
+  border-radius: 0.5rem;
+}
+
+@media screen and (min-width: 1024px) {
+  main {
+    grid-template-columns: 1fr 1.2fr;
+    grid-template-rows: 1fr;
+    background-image: url(./assets/images/bg-main-desktop.png);
+    padding-inline: 5rem;
+  }
+
+  .credit-card__front,
+  .credit-card__back {
+    width: 80%;
+  }
+
+  .thank-you__display {
+    width: 380px;
+  }
+}
